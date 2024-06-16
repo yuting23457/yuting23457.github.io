@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<style>
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+.city {
+  background-color: aliceblue;
+  color: white;
+  padding: 10px;
+} 
+</style>
+
+<h2>MBTI</h2>
+<p>two mbti that I have thought about myself</p>
+
+<h1 id="myHeader">ISFJ</h1>
+
+<h1 class="city">Hello!</h1>
+
+<button onclick="displayResult()">the other one</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "INFJ";
+}
+</script>
+
+</body>
+</html>

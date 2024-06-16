@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head><title>final total</title>
+    <link id="stylesheet" rel="stylesheet" href="CSS/0307.css">
+    <link rel="stylesheet2" href="https://unpkg.com/leaflet/dist/leaflet.css">
+
+<link rel="icon" type="image/memecat-icon" href="memecat.ico">
+
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <style>
+        .color1{
+            background-color:aliceblue;
+            color:slategrey;
+        }
+        .color2{
+            border:1px dashed gray;
+            color:darksalmon;
+            margin:auto;
+        }
+        .color3{
+            color:darksalmon;
+        }
+        button{
+            background-color:black;
+            color:beige;
+        }
+        #color4{
+            color:midnightblue;
+        }
+        .color5{
+            color:teal;
+        }
+        body{
+            background-color:gray;
+        }
+        table{
+            
+            border-collapse:seperate;
+            width:100%;
+            border-spacing:5px;
+        }
+        th,td{
+            border:1.5px dotted #96d4d4;
+            border-radius: 10px;
+            text-align:center;
+        }
+        tr:hover{background-color:#d6eeee;}
+        span {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        #map{
+            height:400px;
+        }
+
+    
+    </style>
+</head>
+<body>
+	<h1>html of acs112124<br>something about me</h1>
+    <h3>these are my favorite picture </h3>
+    <picture>
+    	<source media="(min-width:1000px)" srcset="cat.jpg">
+        <source media="(min-width:600px)" srcset="bing.jpg">
+        <img src="catcat.jpg" style="width:auto;">
+    </picture>
+    <p>picture will change with the width</p>
+    
+    <h1>ntcu</h1>
+    <h3>study in ntcu</h3> 
+    <ul style="list-style-type:disc;">
+    	<li>national taichung university of education</li>
+        <ul style="list-style-type:circle;">
+            <li>403台中市西區民生路140號</li>
+            <li>04 2218 3199</li>
+        </ul>
+        <li>computer science</li>
+    </ul><br>
+
+    <h2>Want to know where our school is?</h2>
+    <p>find out in the map!</p>
+    <button onclick="getlocation()">click me to the map!</button>
+    <p id="demo"></p>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <br>
+
+
+    <table>
+        <caption>我的課表</caption>
+        <tr>
+            <th rowspan="2" style=background-color:mintcream></th>
+            <th colspan="5" style=background-color:mintcream>Week</th>
+        </tr>
+            
+        <tr>
+            <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>1</th>
+          <td>資料科學</td>
+          <td rowspan="2">中文</td>
+          <td></td>
+          <td>資料科學</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>2</th>
+          <td rowspan="3">計網</td>
+          <td rowspan="3">離散</td>
+          <td rowspan="3">網頁</td>
+          <td></td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>3</th>
+          <td rowspan="2"></td>
+          <td></td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>4</th>
+          <td></td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>5</th>
+          <td rowspan="2">體育</td>
+          <td rowspan="2">英文</td>
+          <td rowspan="3">程設</td>
+          <td></td>
+          <td rowspan="2">行動科技</td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>6</th>
+          <td rowspan="3">邏設</td>
+        </tr>
+        
+        <tr>
+            <th style=background-color:mintcream>7</th>
+          <td rowspan="2">邏設實驗</td>
+          <td rowspan="2">班會</td>
+          <td rowspan="2"></td>
+        </tr>
+         
+        <tr>
+            <th style=background-color:mintcream>8</th>
+          <td></td>
+        </tr>
+      
+    </table>
+    <br>
+
+
+    <h2>click the button!</h2>
+
+    <button onclick="show()">show</button>
+    <button onclick="hide()">hide</button>
+    <button onclick="changetext()">change text</button>
+    <button onclick="change()">change look</button>
+
+
+    <h3 class="color3">acs112124</h3>
+
+    <h3 class="color3">from newtapei</h3>
+
+    <h3 class="color2 " id="color4" style="display: block;">it will change if you click change text!</h3>
+
+    <h3 class="color3">change th looklook</h3>
+    <p>happy to see you</p>
+
+    <br><br>
+
+
+    <button onclick="add()">create new paragraph</button>
+
+    <div id="mydiv" style="background-image:url('back114.gif');">
+        <h2>+1+1+1</h2>
+        <p>1234</p>
+        <p>4321</p>
+   </div>
+
+   <h2>進擊的巨人!!!</h2>
+   <iframe src="file:///C:/Users/yutin/OneDrive/%E6%A1%8C%E9%9D%A2/%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88/foriframe.html" name="iframe_a" height="350px" width="100%" title="Iframe Example"></iframe>"
+   <p><a href="file:///C:/Users/yutin/OneDrive/%E6%A1%8C%E9%9D%A2/%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88/%E6%9C%9F%E6%9C%AB/ID%20button.html" target="iframe_a">MY MBTI</a></p>
+   <span onclick="emotion(0)">what is isfj</span><br><br>
+    <span onclick="emotion(1)">what is infj</span>
+   <p><a href="file:///C:/Users/yutin/OneDrive/%E6%A1%8C%E9%9D%A2/%E7%B6%B2%E9%A0%81%E8%A8%AD%E8%A8%88/foriframe.html" target="iframe_a">return</a></p>
+   
+   <br><br>
+
+   <h2>Mail <img src="mail.gif" alt="Mail Image"  width="50px" style="vertical-align: middle;"></h2>
+   <p>if you want to talk to me, click the mail address and send me an email~ </p>
+   <p><a href="mailto:acs112124@gm.ntcu.edu.tw">acs112124@gm.ntcu.edu.tw</a></p>
+
+
+    <script>
+        function show(){
+            var x=document.getElementsByClassName("color2");
+            for(var i=0;i<x.length;i++){
+                x[i].style.display="block";
+            }
+        }
+        function hide(){
+            var x=document.getElementsByClassName("color2");
+            for(var i=0;i<x.length;i++){
+                x[i].style.display="none";
+            }
+        }
+        function changetext(){
+            document.getElementById("color4").innerHTML="hahahahahha";
+        }
+        function change(){
+            const element=document.getElementsByTagName("h3");
+            for(let i=0;i<element.length;i++){
+                element[i].classList.add("color5");
+            }
+        }
+        function add(){
+            var para=document.createElement("p");
+            para.textContent="+1";
+            para.classList.add("div");
+            document.getElementById("mydiv").appendChild(para);
+        }
+        function emotion(sw){
+            var pic;
+            if(sw == 0){
+                pic = "isfj.jpg";
+            }
+            else if(sw == 1){
+                pic = "infj.jpg";
+            }
+            document.querySelector('iframe[name="iframe_a"]').src = pic;
+        }
+
+        
+
+        const x = document.getElementById("demo");
+
+        function getlocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+
+            // Initialize the map
+            const map = L.map('map').setView([position.coords.latitude, position.coords.longitude], 13);
+
+            // Add the OpenStreetMap tiles as a layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add a marker to the map
+            L.marker([position.coords.latitude, position.coords.longitude]).addTo(map)
+                .bindPopup('Your Location')
+                .openPopup();
+        }
+        document.querySelectorAll('link[rel="stylesheet2"]').forEach(function(link) {
+            link.setAttribute('rel', 'stylesheet');
+        });
+
+    </script>
+    </body>
+    </html>
